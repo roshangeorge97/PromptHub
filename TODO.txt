@@ -1,0 +1,6 @@
+Features
+- input validation
+- edit prompt
+
+Chores
+- use env.mjs https://github.dev/shadcn/taxonomy/blob/651f984e52edd65d40ccd55e299c1baeea3ff017/components/nav.tsx#L27
