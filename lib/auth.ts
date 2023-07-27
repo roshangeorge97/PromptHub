@@ -1,5 +1,5 @@
 import { getServerSession } from 'next-auth/next';
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import { PrismaAdapter } from '@auth/prisma-adapter';
 import GitHubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import prisma from '@/lib/prisma';
@@ -11,7 +11,7 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: '/login'
   },
-
+  adapter: PrismaAdapter(prisma),
   providers: [
     // callbackUrl: `${process.env.NEXTAUTH_URL}/api/auth/callback/github`
     GitHubProvider({
@@ -22,9 +22,10 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: "514366748840-9aj347kq2l6361feoifhl51gcfodaq2s.apps.googleusercontent.com",
       clientSecret: "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",
+      allowDangerousEmailAccountLinking: true,
     })
   ],
-  adapter: PrismaAdapter(prisma),
+  
     callbacks: {
     async session({ token, session }) {
       if (token) {

@@ -17,7 +17,6 @@ const DiscoverChatsPage = async ({
     where: {
       title: {
         contains: searchParams.q,
-        mode: 'insensitive',
       }
     },
     include: {

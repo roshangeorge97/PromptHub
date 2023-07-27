@@ -1,0 +1,4 @@
+name = "chatgpt-prompts-hub-main"
+main = "src/index.ts"
+compatibility_date = "2023-07-24"
+DATABASE_URL = "prisma://aws-eu-central-1.prisma-data.com/?api_key=uAPvqdgzzapEf3XyZaX0AVRt9EZ9TZOJakpPDWgATV2r5I3SmFYQMzLtMfvbWlVI"

@@ -1,7 +1,13 @@
 import { PrismaClient } from '@prisma/client';
 import slugify from 'slugify';
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({
+  datasources: {
+    db: {
+      url: "mysql://2WfRfvdCt5PVHcb.root:Vf6LhS6IZpo2UknE@gateway01.eu-central-1.prod.aws.tidbcloud.com:4000/test?pool_timeout=60&sslaccept=accept_invalid_certs"
+    }
+  }
+});;
 
 async function seedMissedSlugData() {
   const posts = await prisma.chatPrompt.findMany({});

@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "chatprompts" (
+CREATE TABLE `chatprompts` (
     "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "url" TEXT NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE "chatprompts" (
 );
 
 -- CreateTable
-CREATE TABLE "Post" (
+CREATE TABLE `Post` (
     "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "content" TEXT,
@@ -24,7 +24,7 @@ CREATE TABLE "Post" (
 );
 
 -- CreateTable
-CREATE TABLE "accounts" (
+CREATE TABLE `accounts` (
     "id" TEXT NOT NULL,
     "user_id" TEXT NOT NULL,
     "type" TEXT NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE "accounts" (
 );
 
 -- CreateTable
-CREATE TABLE "sessions" (
+CREATE TABLE `sessions` (
     "id" TEXT NOT NULL,
     "session_token" TEXT NOT NULL,
     "user_id" TEXT NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE "sessions" (
 );
 
 -- CreateTable
-CREATE TABLE "users" (
+CREATE TABLE `users` (
     "id" TEXT NOT NULL,
     "name" TEXT,
     "email" TEXT,
@@ -67,20 +67,20 @@ CREATE TABLE "users" (
 );
 
 -- CreateTable
-CREATE TABLE "verificationtokens" (
+CREATE TABLE `verificationtokens` (
     "identifier" TEXT NOT NULL,
     "token" TEXT NOT NULL,
     "expires" TIMESTAMP(3) NOT NULL
 );
 
 -- CreateTable
-CREATE TABLE "_upvotes" (
+CREATE TABLE `_upvotes` (
     "A" TEXT NOT NULL,
     "B" TEXT NOT NULL
 );
 
 -- CreateTable
-CREATE TABLE "_saves" (
+CREATE TABLE `_saves` (
     "A" TEXT NOT NULL,
     "B" TEXT NOT NULL
 );

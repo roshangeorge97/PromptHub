@@ -7,13 +7,26 @@ declare global {
 
 let prisma: PrismaClient;
 
-if (process.env.NODE_ENV === 'production') {
-  prisma = new PrismaClient();
+if (process.env.NODE_ENV === "production") {
+  prisma = new PrismaClient()
 } else {
-  if (!global.cachedPrisma) {
-    global.cachedPrisma = new PrismaClient();
+  let globalWithPrisma = global as typeof globalThis & {
+    prisma: PrismaClient
   }
-  prisma = global.cachedPrisma;
+  if (!globalWithPrisma.prisma) {
+    globalWithPrisma.prisma = new PrismaClient(/*{ log: ['info', 'query'] }*/)
+  }
+  prisma = globalWithPrisma.prisma
 }
 
-export default prisma;
+prisma.$use(async (params, next) => {
+  if (params.action == "create" && params.model == "Account") {
+    delete params.args.data["not-before-policy"]
+  }
+
+  const result = await next(params)
+  // See results here
+  return result
+})
+
+export default prisma
