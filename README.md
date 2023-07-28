@@ -8,6 +8,14 @@ The inspiration for PromptHub came from recognizing the challenges faced by deve
 
 PromptHub is a collaborative platform that empowers AI enthusiasts to supercharge their AI interactions. The platform offers a repository of carefully curated prompts that have been tested and proven to work effectively with various language models. It serves as a one-stop destination for programmers seeking version-compatible prompts, content creators looking for SEO-optimized prompts, startups prototyping AI-powered virtual assistants, and researchers exploring multilingual and privacy-preserving prompts.
 
+## Screenshots
+
+![Dashboard](Screenshots/screenshot1.png)
+![Publish Prompt](Screenshots/screenshot2.png)
+![Interact with a prompt](Screenshots/screenshot3.png)
+![Continue through ChatGPT](Screenshots/screenshot4.png)
+![Update your profile](Screenshots/screenshot5.png)
+
 ## Tech Stack
 
 To develop PromptHub, we utilized the following tech stack:
