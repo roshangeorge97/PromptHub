@@ -1,4 +1,4 @@
-# PromptHub - Supercharging AI Interactions 
+# PromptHub - Supercharging AI Interactions
 
 ## Inspiration
 
