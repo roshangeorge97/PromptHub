@@ -47,7 +47,7 @@ Looking ahead, our vision for PromptHub involves transforming it into a platform
 To get started with PromptHub, follow these steps:
 
 1. Clone the repository.
-2. Install the required dependencies using `npm install`.
+2. Install the required dependencies using `npm install`. 
 3. Run the development server with `npm run dev`.
 4. Explore the curated prompts, share your own successful prompts, and engage with the community!
 
