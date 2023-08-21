@@ -1,5 +1,5 @@
 # PromptHub - Supercharging AI Interactions
-
+ 
 ## Inspiration
 
 The inspiration for PromptHub came from recognizing the challenges faced by developers, content creators, startups, and prompt engineers in effectively interacting with language models. We were motivated to create a platform that simplifies prompt creation, fosters collaboration, and provides a curated repository of successful prompts for a diverse range of use cases.
